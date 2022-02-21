@@ -4,9 +4,9 @@ import androidx.room.Entity
 
 @Entity
 data class Weather(
-    val id : String? = null,
-    val main : String? = null,
-    val description : String? = null,
-    val icon : String? = null
+    val id : String?,
+    val main : String?,
+    val description : String?,
+    val icon : String?
 ) {
 }

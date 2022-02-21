@@ -9,7 +9,7 @@ import com.example.mamedweatherforecast.model.repository.WeatherTownRepository
 import com.example.mamedweatherforecast.utils.LoadingState
 import kotlinx.coroutines.launch
 
-class TownViewModel(private val weatherTownRepository: WeatherTownRepository) : ViewModel() {
+class TownViewModel(private val weatherTownRepository : WeatherTownRepository) : ViewModel() {
 
     private val _loadingState = MutableLiveData<LoadingState>()
 

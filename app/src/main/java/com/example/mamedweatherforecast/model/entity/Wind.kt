@@ -4,8 +4,8 @@ import androidx.room.Entity
 
 @Entity
 data class Wind(
-    val speed : String? = null,
-    val deg : String? = null,
-    val gust : String? = null,
+    val speed : String?,
+    val deg : String?,
+    val gust : String?
 ) {
 }

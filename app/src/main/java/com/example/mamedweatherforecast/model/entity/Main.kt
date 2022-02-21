@@ -5,13 +5,13 @@ import androidx.room.Entity
 
 @Entity
 data class Main(
-    val temp : String? = null,
-    val feels_like : String? = null,
-    val temp_min : String? = null,
-    val temp_max : String? = null,
-    val pressure : String? = null,
-    val humidity : String? = null,
-    val sea_level : String? = null,
-    val grnd_level : String? = null,
+    val temp : String?,
+    val feels_like : String?,
+    val temp_min : String?,
+    val temp_max : String?,
+    val pressure : String?,
+    val humidity : String?,
+    val sea_level : String?,
+    val grnd_level : String?
 ) {
 }

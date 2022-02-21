@@ -4,9 +4,9 @@ import androidx.room.Entity
 
 @Entity
 data class SystemWeather(
-    val type : String? = null,
-    val id : String? = null,
-    val country : String? = null,
-    val sunrise : String? = null,
-    val sunset : String? = null,
+    val type : String?,
+    val id : String?,
+    val country : String?,
+    val sunrise : String?,
+    val sunset : String?
 )

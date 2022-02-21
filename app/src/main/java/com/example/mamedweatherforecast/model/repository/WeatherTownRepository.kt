@@ -5,7 +5,7 @@ import com.example.mamedweatherforecast.model.dao.WeatherTownDao
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-class WeatherTownRepository(private val weatherTownApi : WeatherTownApi, private val weatherTownDao: WeatherTownDao) {
+class WeatherTownRepository(private val weatherTownApi : WeatherTownApi, val weatherTownDao: WeatherTownDao) {
 
     val data = weatherTownDao.findAll()
 
