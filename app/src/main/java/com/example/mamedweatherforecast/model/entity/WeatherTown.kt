@@ -13,27 +13,29 @@ import java.util.*
 data class WeatherTown(
     @PrimaryKey
     @SerializedName("id")
-    val id : String? = null,
+    val id : String,
     @SerializedName("coordination")
-    val coordination : MutableList<Coordination>? = null,
+    val coordination : MutableList<Coordination>,
     @SerializedName("weather")
-    val weather : MutableList<Weather>? = null,
+    val weather : MutableList<Weather>,
     @SerializedName("base")
     val base : String? = null,
     @SerializedName("main")
-    val main : MutableList<Main>? = null,
+    val main : MutableList<Main>,
     @SerializedName("visibility")
     val visibility : String? = null,
     @SerializedName("wind")
-    val wind : MutableList<Wind>? = null,
+    val wind : MutableList<Wind>,
     @SerializedName("clouds")
-    val clouds : MutableList<Clouds>? = null,
+    val clouds : MutableList<Clouds>,
     @SerializedName("dt")
     val dt : String? = null,
     @SerializedName("systemWeather")
-    val systemWeather: MutableList<SystemWeather>? = null,
+    val systemWeather: MutableList<SystemWeather>,
     @SerializedName("timeZone")
     val timeZone: String? = null,
+    @SerializedName("name")
+    val name: String? = null,
     @SerializedName("cod")
     val cod : String? = null
 ) {

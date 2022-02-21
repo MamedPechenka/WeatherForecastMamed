@@ -17,7 +17,7 @@ import org.koin.android.ext.koin.androidApplication
 
 val viewModelModule = module {
 
-    single { TownViewModel() }
+    single { TownViewModel(get()) }
 }
 
 val apiModule = module {
