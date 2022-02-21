@@ -13,118 +13,118 @@ data class WeatherTown @JvmOverloads constructor (
     @SerializedName("id")
     val id : String,
 
-    @SerializedName("coordination")
-    val coordination : MutableList<Coordination>,
+    @SerializedName("coord")
+    val coordination : Coordination,
 
     @SerializedName("weather")
-    val weather : MutableList<Weather>,
+    val weather : Weather,
 
     @SerializedName("base")
     val base : String,
 
     @SerializedName("main")
-    val main : MutableList<Main>,
+    val main : Main,
 
     @SerializedName("visibility")
     val visibility : String,
 
     @SerializedName("wind")
-    val wind : MutableList<Wind>,
+    val wind : Wind,
 
     @SerializedName("clouds")
-    val clouds : MutableList<Clouds>,
+    val clouds : Clouds,
 
     @SerializedName("dt")
-    val dt : String?,
+    val dt : String,
 
-    @SerializedName("systemWeather")
-    val systemWeather: MutableList<SystemWeather>,
+    @SerializedName("sys")
+    val systemWeather: SystemWeather,
 
-    @SerializedName("timeZone")
-    val timeZone: String?,
+    @SerializedName("timezone")
+    val timeZone: String,
 
     @SerializedName("name")
-    val name: String?,
+    val name: String = "Moscow",
 
     @SerializedName("cod")
-    val cod : String?
+    val cod : String
 ) {
     object Converter {
         @TypeConverter
         @JvmStatic
-        fun toJsonCoordination(coordination : List<Coordination>?) : String {
+        fun toJsonCoordination(coordination : Coordination) : String {
             return GsonUtils.writeValue(coordination.toString())
         }
 
         @TypeConverter
         @JvmStatic
-        fun fromJsonCoordination(json : String) : List<Coordination>? {
-            return GsonUtils.readValues(json, Coordination::class.java)
+        fun fromJsonCoordination(json : String) : Coordination {
+            return GsonUtils.readValue(json, Coordination::class.java)
         }
 
 
         @TypeConverter
         @JvmStatic
-        fun toJsonWeather(weather : List<Weather>?) : String {
+        fun toJsonWeather(weather : Weather) : String {
             return GsonUtils.writeValue(weather.toString())
         }
 
         @TypeConverter
         @JvmStatic
-        fun fromJsonWeather(json : String) : List<Weather>? {
-            return GsonUtils.readValues(json, Weather::class.java)
+        fun fromJsonWeather(json : String) : Weather {
+            return GsonUtils.readValue(json, Weather::class.java)
         }
 
 
         @TypeConverter
         @JvmStatic
-        fun toJsonMain(main : List<Main>?) : String {
+        fun toJsonMain(main : Main) : String {
             return GsonUtils.writeValue(main.toString())
         }
 
         @TypeConverter
         @JvmStatic
-        fun fromJsonMain(json : String) : List<Main>? {
-            return GsonUtils.readValues(json, Main::class.java)
+        fun fromJsonMain(json : String) : Main {
+            return GsonUtils.readValue(json, Main::class.java)
         }
 
 
         @TypeConverter
         @JvmStatic
-        fun toJsonWind(wind : List<Wind>?) : String {
+        fun toJsonWind(wind : Wind) : String {
             return GsonUtils.writeValue(wind.toString())
         }
 
         @TypeConverter
         @JvmStatic
-        fun fromJsonWind(json : String) : List<Wind>? {
-            return GsonUtils.readValues(json, Wind::class.java)
+        fun fromJsonWind(json : String) : Wind {
+            return GsonUtils.readValue(json, Wind::class.java)
         }
 
 
         @TypeConverter
         @JvmStatic
-        fun toJsonClouds(clouds : List<Clouds>?) : String {
+        fun toJsonClouds(clouds : Clouds) : String {
             return GsonUtils.writeValue(clouds.toString())
         }
 
         @TypeConverter
         @JvmStatic
-        fun fromJsonClouds(json : String) : List<Clouds>? {
-            return GsonUtils.readValues(json, Clouds::class.java)
+        fun fromJsonClouds(json : String) : Clouds {
+            return GsonUtils.readValue(json, Clouds::class.java)
         }
 
 
         @TypeConverter
         @JvmStatic
-        fun toJsonSystemWeather(systemWeather : List<SystemWeather>?) : String {
+        fun toJsonSystemWeather(systemWeather : SystemWeather) : String {
             return GsonUtils.writeValue(systemWeather.toString())
         }
 
         @TypeConverter
         @JvmStatic
-        fun fromJsonSystemWeather(json : String) : List<SystemWeather>? {
-            return GsonUtils.readValues(json, SystemWeather::class.java)
+        fun fromJsonSystemWeather(json : String) : SystemWeather {
+            return GsonUtils.readValue(json, SystemWeather::class.java)
         }
     }
 }

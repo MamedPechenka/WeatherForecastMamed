@@ -11,8 +11,8 @@ import com.example.mamedweatherforecast.model.entity.WeatherTown
 interface WeatherTownDao {
 
     @Query("SELECT * FROM infoTown")
-    fun findAll() : LiveData<List<WeatherTown>>
+    fun findAll() : LiveData<WeatherTown>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun add(infoTown : List<WeatherTown>)
+    fun add(infoTown: WeatherTown)
 }

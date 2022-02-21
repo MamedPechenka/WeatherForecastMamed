@@ -18,10 +18,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         townViewModel.data.observe(this, Observer {
-            it.forEach { nameTown ->
-                Log.e("TAG", nameTown.name)
-                Toast.makeText(baseContext, nameTown.name, Toast.LENGTH_SHORT).show()
-            }
+            Log.e("TAG", it.name)
         })
 
         townViewModel.loadingState.observe(this, Observer {
